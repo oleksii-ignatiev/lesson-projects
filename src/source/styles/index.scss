@@ -106,6 +106,10 @@ main {
         background-color: $color18;
       }
 
+      &.selected {
+        background-color: $color18;
+      }
+
       &::before {
         content: '';
         display: block;

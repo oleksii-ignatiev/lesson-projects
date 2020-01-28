@@ -33,7 +33,7 @@ export const Source = () => {
                   <span className="tag second">Spotify</span>
                 </div>
               </div>
-              <div className="task">
+              <div className="task selected">
                 <span className="title">Design new dashboard</span>
                 <div className="meta">
                   <span className="deadline">02 Nov 2020</span>
