@@ -200,9 +200,11 @@ main {
   background-color: $color6;
 
   .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     height: 53px;
-    padding-top: 17px;
     margin-bottom: 27px;
 
     &::after {
@@ -242,6 +244,28 @@ main {
 
       &.completed {
         color: $color3;
+      }
+    }
+
+    .button-remove-task {
+      border: none;
+      background: none;
+      outline: none;
+      margin-right: 17px;
+      transition: all 200ms;
+
+      &::before {
+        content: '\f00d';
+        font-family: 'Line Awesome Free';
+        font-weight: 900;
+        font-size: 26px;
+        display: block;
+        color: $color11;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
       }
     }
   }
@@ -385,6 +409,12 @@ main {
 
       .tag {
         margin-right: 9px;
+        transition: all 200ms;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
 
         &:last-child {
           margin-right: 0;
@@ -408,6 +438,12 @@ main {
         background: none;
         color: $color6;
         border-radius: 4px;
+        transition: all 200ms;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
       }
 
       .button-save-task {

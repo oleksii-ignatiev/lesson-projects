@@ -115,6 +115,7 @@ export const TaskForm = () => {
           <div className="task-card">
             <div className="head">
               <button className="button-complete-task">Mark as complete</button>
+              <button className="button-remove-task"></button>
             </div>
             <div className="content">
               <input type="text" placeholder="Task title" className="title"/>
