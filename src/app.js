@@ -1,10 +1,12 @@
 import React from 'react';
-import { Source } from './source';
+import './theme/index.scss';
+
+import { Login } from './login';
 
 export const App = () => {
   return (
     <>
-      <Source />
+      <Login />
     </>
   )
 };
