@@ -1,6 +1,6 @@
 import React from 'react';
-import Styles from '../styles/styles.scss';
-import Article from '../article';
+import Styles from './styles.module.scss';
+import { Article } from '../article';
 
 export const News = () => {
   return (

@@ -1,20 +1,19 @@
 import React from 'react';
-import Styles from '../styles/styles.scss';
+import Styles from './styles.module.scss';
+import { CommentsCounter } from '../../elements/commentsCounter';
+import { LikesCounter } from '../../elements/likesCounter';
+import { Tag } from '../../elements/tag';
 
 export const Article = () => {
   return (
-	<section className={Styles.article}>
+	<section className={ Styles.article }>
 		<header>
-			<div class="poster">
+			<div className={ Styles.poster }>
 				<img src="https://miro.medium.com/max/1280/1*N6eYi8bOQ9tyZy8NGWDNKA.png" alt=""/>
 			</div>
-			<div class="tags">
-				<div>
-				<span class="tag">Literature</span>
-				</div>
-				<div>
-				<span class="tag">Books</span>
-				</div>
+			<div className={ Styles.tags }>
+				<Tag tag='Literature' />
+				<Tag tag='Books' />
 			</div>
 		</header>
 		<article>
@@ -23,9 +22,9 @@ export const Article = () => {
 		</article>
 		<footer>
 			<span>15.07.2017</span>
-			<div class="controls">
-			<span class="commentsCounter">10</span>
-				<span class="likesCounter">315</span>
+			<div className={ Styles.controls }>
+				<CommentsCounter />
+				<LikesCounter />
 			</div>
 		</footer>
 	</section>
