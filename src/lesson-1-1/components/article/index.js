@@ -12,8 +12,8 @@ export const Article = () => {
 				<img src="https://miro.medium.com/max/1280/1*N6eYi8bOQ9tyZy8NGWDNKA.png" alt=""/>
 			</div>
 			<div className={ Styles.tags }>
-				<Tag tag='Literature' />
-				<Tag tag='Books' />
+				<Tag tagMessage='Literature' />
+				<Tag tagMessage='Books' />
 			</div>
 		</header>
 		<article>
@@ -23,8 +23,8 @@ export const Article = () => {
 		<footer>
 			<span>15.07.2017</span>
 			<div className={ Styles.controls }>
-				<CommentsCounter />
-				<LikesCounter />
+				<CommentsCounter commentCounter='234' />
+				<LikesCounter likesCounter='500'/>
 			</div>
 		</footer>
 	</section>
