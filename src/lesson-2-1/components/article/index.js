@@ -6,16 +6,15 @@ import { Tag } from '../../elements/tag';
 
 export const Article = (props) => {
 	const article = props.element || {};
-	const currentDate = Date.parse( new Date( article.published ) );
-	console.log(currentDate);
-	// const outputDate = currentDate.getDate() + '.' + currentDate.getMonth() + '.' + currentDate.getFullYear();
+	const currentDate = Date.parse(article.published) ;
+	//const outputDate = currentDate.getDate(); //+ '.' + currentDate.getMonth() + '.' + currentDate.getFullYear();
 	return (
-		<section className={ Styles.article }>
+		<section className = { Styles.article }>
 			<header>
-				<div className={ Styles.poster }>
-					<img src={ article.image } alt=""/>
+				<div className = { Styles.poster }>
+					<img src = { article.image } alt=""/>
 				</div>
-				<div className={ Styles.tags }>
+				<div className = { Styles.tags }>
 					{article.tags.map( 
 						(message, index) => <Tag 
 												key = {index} 
@@ -30,7 +29,7 @@ export const Article = (props) => {
 			</article>
 			<footer>
 
-				<span>{  }</span>
+				<span>{ currentDate }</span>
 				<div className={ Styles.controls }>
 					<CommentsCounter commentCounter = { article.comments } />
 					<LikesCounter likesCounter = { article.likes }/>
