@@ -6,8 +6,12 @@ import { Tag } from '../../elements/tag';
 
 export const Article = (props) => {
 	const article = props.element || {};
-	const currentDate = Date.parse(article.published) ;
-	//const outputDate = currentDate.getDate(); //+ '.' + currentDate.getMonth() + '.' + currentDate.getFullYear();
+	const currentDate = new Date(article.published).toLocaleString("uk",{
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+    }) ;
+	
 	return (
 		<section className = { Styles.article }>
 			<header>
