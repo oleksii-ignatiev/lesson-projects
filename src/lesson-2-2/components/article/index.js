@@ -11,7 +11,8 @@ export const Article = (props) => {
         month: 'numeric',
         day: 'numeric',
     }) ;
-	return (
+    
+    return (
 		<section className = { Styles.article }>
 			<header>
 				<div className = { Styles.poster }>
@@ -35,7 +36,7 @@ export const Article = (props) => {
 				<span>{ currentDate }</span>
 				<div className={ Styles.controls }>
 					<CommentsCounter commentCounter = { article.comments } />
-					<LikesCounter likesCounter = { article.likes }/>
+					<LikesCounter likesCounter = { article.likes } />
 				</div>
 			</footer>
 		</section>
