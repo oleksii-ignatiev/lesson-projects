@@ -4,8 +4,8 @@ import { Article } from '../article';
 
 export const News = (props) => {
 	const news = props.source || [];
-	console.log(news);	
-	return (
+    
+    return (
 		<section className={Styles.news}>
 			{news.map( (element, index) => <Article 
 												key = {index} 
