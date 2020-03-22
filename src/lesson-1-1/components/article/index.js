@@ -11,22 +11,22 @@ export const Article = () => {
 			<div className={ Styles.poster }>
 				<img src="https://miro.medium.com/max/1280/1*N6eYi8bOQ9tyZy8NGWDNKA.png" alt=""/>
 			</div>
-			<div className={ Styles.tags }>
-				<Tag tagMessage='Literature' />
-				<Tag tagMessage='Books' />
-			</div>
-		</header>
-		<article>
-			<h1>American writer of bad cowboy stories arrived in</h1>
-			<p>Volunteering to help people in need combined with travelling to faraway places is a new </p>
-		</article>
-		<footer>
-			<span>15.07.2017</span>
-			<div className={ Styles.controls }>
-				<CommentsCounter commentCounter='234' />
-				<LikesCounter likesCounter='500'/>
-			</div>
-		</footer>
-	</section>
-  )
+				<div className={ Styles.tags }>
+					<Tag tagMessage='Literature' />
+					<Tag tagMessage='Books' />
+				</div>
+			</header>
+			<article>
+				<h1>American writer of bad cowboy stories arrived in</h1>
+				<p>Volunteering to help people in need combined with travelling to faraway places is a new </p>
+			</article>
+			<footer>
+				<span>15.07.2017</span>
+				<div className={ Styles.controls }>
+					<CommentsCounter commentCounter='234' />
+					<LikesCounter likesCounter='500'/>
+				</div>
+			</footer>
+		</section>
+	)
 };
