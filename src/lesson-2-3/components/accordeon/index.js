@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import Styles from './styles.module.scss';
-//import { Question } from '../question';
 
 export const Accordeon = (props) => {
     const accordion = props.source || [];
@@ -15,11 +14,10 @@ export const Accordeon = (props) => {
                 
                 const accordionCX = cx({
                     [ Styles['accordion-item'] ]: true, 
-                    [ Styles['selected'] ]: (active === index) ? active : index 
+                    [ Styles['selected'] ]: (active === index) ? true : false
                 })
                    
                 return (
-                    //<Question key = { index }  index = { index } question = {item} styles = {Styles} onClick = { () => toggle(index) }/>
                     <div key = { index } className = { accordionCX } onClick = { () => toggle(index) } >
                         <div className={Styles['accordion-question']}>
                             <span>{ item.question }</span>
