@@ -3,7 +3,7 @@ import cx from 'classnames';
 import Styles from './styles.module.scss';
 
 export const Accordeon = (props) => {
-    const accordeonTitle = props.title || 'Accordion';
+    const accordeonTitle = props.title;
     const accordion = props.source || [];
     const [active, setActive] = useState(0);
     const toggle = (index) => setActive(index);
@@ -32,3 +32,6 @@ export const Accordeon = (props) => {
 		</section>
     )
 };
+Accordeon.defaultProps = {
+    title: 'Accordion',
+}
