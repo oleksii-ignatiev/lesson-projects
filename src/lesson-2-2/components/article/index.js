@@ -11,7 +11,8 @@ export const Article = (props) => {
         month: 'numeric',
         day: 'numeric',
     }) ;
-	return (
+    
+    return (
 		<section className = { Styles.article }>
 			<header>
 				<div className = { Styles.poster }>
