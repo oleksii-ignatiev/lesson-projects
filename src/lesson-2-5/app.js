@@ -5,7 +5,7 @@ import source from './source1.json';
 export const App = () => {
 	return (
 		<>
-			<Accordeon source={source} title = 'The Title'/>
+            <Accordeon source={source} title = "The Title"/>
 		</>
 	)
 };

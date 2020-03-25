@@ -3,6 +3,7 @@ import Styles from './styles.module.scss';
 import { CommentsCounter } from '../../elements/commentsCounter';
 import { LikesCounter } from '../../elements/likesCounter';
 import { Tag } from '../../elements/tag';
+import { string, number, arrayOf } from 'prop-types';
 
 export const Article = (props) => {
 	const article = props.element || {};
@@ -41,3 +42,14 @@ export const Article = (props) => {
 		</section>
 	)
 };
+Article.propTypes = {
+            title: string.isRequired,
+      description: string.isRequired,
+        published: string.isRequired,
+            likes: number,
+         comments: number,
+            image: string.isRequired,
+             tags: arrayOf(
+                       string,
+                   )
+}
