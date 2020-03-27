@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './styles.module.scss';
+import { string } from 'prop-types';
 
 export const Tag = (props) => {
 	const message = props.tagMessage || '';
@@ -10,3 +11,6 @@ export const Tag = (props) => {
 		
 	)
 };
+Tag.propTypes = {
+    tagMessage: string,
+}

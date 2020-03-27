@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import Styles from './styles.module.scss';
+import { string, shape, arrayOf } from 'prop-types';
 
 export const Accordeon = (props) => {
     const accordeonTitle = props.title;
@@ -34,4 +35,13 @@ export const Accordeon = (props) => {
 };
 Accordeon.defaultProps = {
     title: 'Accordion',
+}
+Accordeon.propTypes = {
+    source: arrayOf(
+        shape({
+            question: string.isRequired,
+            answer: string.isRequired,
+        }),
+    ),
+    title: string,
 }
