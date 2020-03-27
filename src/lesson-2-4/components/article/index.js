@@ -35,7 +35,7 @@ export const Article = (props) => {
 				<span>{ currentDate }</span>
 				<div className={ Styles.controls }>
 					<CommentsCounter commentCounter = { article.comments } />
-					<LikesCounter likesCounter = { article.likes }/>
+					<LikesCounter likesCounter = { article.likes } />
 				</div>
 			</footer>
 		</section>
