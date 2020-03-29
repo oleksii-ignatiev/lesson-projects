@@ -8,8 +8,8 @@ import { useApiLoader } from './useApiLoader';
 
 export const News = () => {
     
-    const { db, isFetching, isServerError } = useApiLoader();
-    const articleJSX = ( !isServerError ) ? db.map(({objectId, ...props}) => (<Article key = { objectId } { ...props } />)) : <h2>Сервер не отвечает</h2>;
+    const { db, isFetching, isServerError, isClientError } = useApiLoader();
+    const articleJSX = ( !isServerError ) ? ( ( !isClientError ) ? db.map(({objectId, ...props}) => (<Article key = { objectId } { ...props } />)) : <h2>Неправильный запрос</h2> ) : <h2>Сервер не отвечает</h2>;
     const loadingDataJSX = <p>Загрузка данных</p>;
     
     return (
