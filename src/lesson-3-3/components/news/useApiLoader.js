@@ -17,9 +17,16 @@ export const useApiLoader = () => {
         (async () => {
             try {
                 const response = await api.news.fetch();
-                if ( Math.trunc(response.status/100) === 4 ) {
+                const responseStatus = Math.trunc(response.status/100);
+                
+                if ( responseStatus === 4 ) {
                     setIsClientError(true);
+                    setIsFetching(false);
+                } else if ( responseStatus === 5 ) {
+                    setIsServerError(true);
+                    setIsFetching(false);
                 }
+                
                 const data = await response.json();
                 setDb(data);
                 setIsFetching(true);
