@@ -4,4 +4,5 @@ export const book = Object.freeze({
     contacts: '/contacts',
     secret: '/secret/:value',
     registration: '/registration',
+    student: '/student',
 });

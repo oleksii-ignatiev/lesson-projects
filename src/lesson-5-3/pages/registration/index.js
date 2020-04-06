@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { StudentRegistration as RegistrationComponent } from '../../components/studentRegistration'
+import { RegistrationForm as RegistrationComponent } from '../../bus/student/components/registrationForm'
 
-export const StudentRegistration = () => (
+export const RegistrationForm = () => (
     <>
         <RegistrationComponent />
     </>

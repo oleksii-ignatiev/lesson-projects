@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import { Styles } from './style.scss';
+import { Styles } from '../style.scss';
 
 
 import { InputField } from './formFields/inputField';
@@ -9,18 +9,17 @@ import { SelectField } from './formFields/selectField';
 import { initialValues } from './initialValues';
 import { validate } from './formValidation';
 
+import { useStudent } from '../hooks/useStudent';
 
-export const StudentRegistration = () => {
-    const print = (data) => {
-        console.log(data);
-    };
-
+export const RegistrationForm = () => {
+    const { fillUser } = useStudent();
+    
     return (
         <section>
             <h1>Please fill in the form!</h1>
             <Formik
                 initialValues = { initialValues }
-                onSubmit = { print }
+                onSubmit = { fillUser }
                 validationSchema = { validate }
             >
                 <Form>
