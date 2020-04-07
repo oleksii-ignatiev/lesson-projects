@@ -9,7 +9,8 @@ import { book } from './book';
 import { Home } from '../pages/home';
 import { Contacts } from '../pages/contacts';
 import { Secret } from '../pages/secret';
-import { StudentRegistration } from '../pages/registration';
+import { RegistrationForm } from '../pages/registration';
+import { Profile } from '../pages/student';
 
 // Components
 
@@ -27,7 +28,10 @@ export const Routes = () => (
             <Secret />
         </Route>
         <Route exact path={ book.registration }>
-            <StudentRegistration />
+            <RegistrationForm />
+        </Route>
+        <Route exact path={ book.student }>
+            <Profile />
         </Route>
     </Switch>
   </>
