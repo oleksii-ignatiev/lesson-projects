@@ -7,4 +7,5 @@
 // import './lesson-5-1';
 // import './lesson-5-2';
 // import './lesson-5-3';
-import './lesson-6-1';
+// import './lesson-6-1';
+import './lesson-7-1';
