@@ -21,7 +21,7 @@ export const Comments = () => {
     const listJSX = !isFetching && data && data.map(({name, id}) => (
         
         <li key={ id }>
-            <Link  to={`${ id }`} >{ name }</Link>
+            <Link  to={`/comments/${ id }`} >{ name }</Link>
         </li>
     ));
 
