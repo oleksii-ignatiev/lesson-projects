@@ -32,12 +32,12 @@ describe("posts Reducer", () => {
         "isFetching": true,
       }
     `);
-    expect(postsReducer(void 0, postActions.startFetching()))
+    expect(postReducer(void 0, postActions.startFetching()))
       .toMatchInlineSnapshot(`
       Object {
         "data": null,
         "error": null,
-        "isFetching": false,
+        "isFetching": true,
       }
     `);
   });
@@ -50,7 +50,7 @@ describe("posts Reducer", () => {
         "isFetching": false,
       }
     `);
-    expect(postsReducer(void 0, postActions.stopFetching()))
+    expect(postReducer(void 0, postActions.stopFetching()))
       .toMatchInlineSnapshot(`
       Object {
         "data": null,
@@ -70,10 +70,12 @@ describe("posts Reducer", () => {
         "isFetching": false,
       }
     `);
-    expect(postsReducer(void 0, postActions.fill({ name: "Some post" })))
+    expect(postReducer(void 0, postActions.fill({ name: "Some post" })))
       .toMatchInlineSnapshot(`
       Object {
-        "data": null,
+        "data": Object {
+          "name": "Some post",
+        },
         "error": null,
         "isFetching": false,
       }
@@ -90,11 +92,11 @@ describe("posts Reducer", () => {
       }
     `);
     expect(
-      postsReducer(void 0, postActions.setFetchingError("We have a problem"))
+      postReducer(void 0, postActions.setFetchingError("We have a problem"))
     ).toMatchInlineSnapshot(`
       Object {
         "data": null,
-        "error": null,
+        "error": "We have a problem",
         "isFetching": false,
       }
     `);
