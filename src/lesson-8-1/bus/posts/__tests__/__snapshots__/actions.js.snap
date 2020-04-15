@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`posts Actions fetchAsync 1`] = `[Function]`;
+exports[`fetchAsync should fire acync fetching 1`] = `[Function]`;
 
-exports[`posts Actions fetchAsync 2`] = `[Function]`;
+exports[`fetchPost should fire acync fetching 1`] = `[Function]`;
 
-exports[`posts Actions fill 1`] = `
+exports[`fill should start filling data 1`] = `
 Object {
   "payload": Object {
     "name": "posts",
@@ -13,7 +13,7 @@ Object {
 }
 `;
 
-exports[`posts Actions fill 2`] = `
+exports[`fill should start filling data 2`] = `
 Object {
   "payload": Object {
     "name": "post",
@@ -22,7 +22,7 @@ Object {
 }
 `;
 
-exports[`posts Actions setFetchingError 1`] = `
+exports[`setFetchingError should output an error 1`] = `
 Object {
   "error": true,
   "payload": "We have a problem",
@@ -30,7 +30,7 @@ Object {
 }
 `;
 
-exports[`posts Actions setFetchingError 2`] = `
+exports[`setFetchingError should output an error 2`] = `
 Object {
   "error": true,
   "payload": "We have a problem",
@@ -38,25 +38,25 @@ Object {
 }
 `;
 
-exports[`posts Actions startFetching 1`] = `
+exports[`startFetching should start fetching 1`] = `
 Object {
   "type": "POSTS_START_FETCHING",
 }
 `;
 
-exports[`posts Actions startFetching 2`] = `
+exports[`startFetching should start fetching 2`] = `
 Object {
   "type": "POST_START_FETCHING",
 }
 `;
 
-exports[`posts Actions stopFetching 1`] = `
+exports[`stopFetching should stop fetching 1`] = `
 Object {
   "type": "POSTS_STOP_FETCHING",
 }
 `;
 
-exports[`posts Actions stopFetching 2`] = `
+exports[`stopFetching should stop fetching 2`] = `
 Object {
   "type": "POST_STOP_FETCHING",
 }
