@@ -1,17 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comments Actions Comment fetchAsync 1`] = `[Function]`;
+exports[`#fetchAsync should fire async fetching process 1`] = `[Function]`;
 
-exports[`Comments Actions Comment fill 1`] = `
+exports[`#fetchAsync should fire async fetching process 2`] = `[Function]`;
+
+exports[`#fill should fill with fetched data 1`] = `
 Object {
   "payload": Object {
-    "name": "Comment",
+    "name": "Payload",
   },
   "type": "COMMENTS_FILL",
 }
 `;
 
-exports[`Comments Actions Comment setFetchingError 1`] = `
+exports[`#fill should fill with fetched data 2`] = `
+Object {
+  "payload": Object {
+    "name": "Payload",
+  },
+  "type": "COMMENT_FILL",
+}
+`;
+
+exports[`#setFetchingError should throw an error 1`] = `
 Object {
   "error": true,
   "payload": "We have a problem",
@@ -19,45 +30,34 @@ Object {
 }
 `;
 
-exports[`Comments Actions Comment startFetching 1`] = `
-Object {
-  "type": "COMMENT_START_FETCHING",
-}
-`;
-
-exports[`Comments Actions Comment stopFetching 1`] = `
-Object {
-  "type": "COMMENTS_STOP_FETCHING",
-}
-`;
-
-exports[`Comments Actions Comments fetchAsync 1`] = `[Function]`;
-
-exports[`Comments Actions Comments fill 1`] = `
-Object {
-  "payload": Object {
-    "name": "Comments",
-  },
-  "type": "COMMENTS_FILL",
-}
-`;
-
-exports[`Comments Actions Comments setFetchingError 1`] = `
+exports[`#setFetchingError should throw an error 2`] = `
 Object {
   "error": true,
   "payload": "We have a problem",
-  "type": "COMMENTS_SET_FETCHING_ERROR",
+  "type": "COMMENT_SET_FETCHING_ERROR",
 }
 `;
 
-exports[`Comments Actions Comments startFetching 1`] = `
+exports[`#startFetching should start fetching process 1`] = `
 Object {
   "type": "COMMENTS_START_FETCHING",
 }
 `;
 
-exports[`Comments Actions Comments stopFetching 1`] = `
+exports[`#startFetching should start fetching process 2`] = `
+Object {
+  "type": "COMMENT_START_FETCHING",
+}
+`;
+
+exports[`#stopFetching should stop fetching process 1`] = `
 Object {
   "type": "COMMENTS_STOP_FETCHING",
+}
+`;
+
+exports[`#stopFetching should stop fetching process 2`] = `
+Object {
+  "type": "COMMENT_STOP_FETCHING",
 }
 `;

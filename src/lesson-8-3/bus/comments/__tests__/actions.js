@@ -1,39 +1,67 @@
 import { commentsActions } from "../actions";
 import { commentActions } from "../commentActions";
 
-describe('Comments Actions', () => {
+// comments actions
+describe('#startFetching', () => { 
+    it('should start fetching process', () => { 
+        const action = commentsActions.startFetching(); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
+describe('#stopFetching', () => { 
+    it('should stop fetching process', () => { 
+        const action = commentsActions.stopFetching(); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
+describe('#fetchAsync', () => { 
+    it('should fire async fetching process', () => { 
+        const action = commentsActions.fetchAsync(); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
+describe('#fill', () => { 
+    it('should fill with fetched data', () => { 
+        const action = commentsActions.fill({name: 'Payload'}); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
+describe('#setFetchingError', () => { 
+    it('should throw an error', () => { 
+        const action = commentsActions.setFetchingError('We have a problem'); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
 
-    // comments actions
-    test('Comments startFetching', () => {
-        expect(commentsActions.startFetching()).toMatchSnapshot();
-    });
-    test('Comments stopFetching', () => {
-        expect(commentsActions.stopFetching()).toMatchSnapshot();
-    });
-    test('Comments fetchAsync', () => {
-        expect(commentsActions.fetchAsync()).toMatchSnapshot();
-    });
-    test('Comments fill', () => {
-        expect(commentsActions.fill({name: 'Comments'})).toMatchSnapshot();
-    });
-    test('Comments setFetchingError', () => {
-        expect(commentsActions.setFetchingError('We have a problem')).toMatchSnapshot();
-    });
 
-    // comment actions
-    test('Comment startFetching', () => {
-        expect(commentActions.startFetching()).toMatchSnapshot();
-    });
-    test('Comment stopFetching', () => {
-        expect(commentsActions.stopFetching()).toMatchSnapshot();
-    });
-    test('Comment fetchAsync', () => {
-        expect(commentsActions.fetchAsync()).toMatchSnapshot();
-    });
-    test('Comment fill', () => {
-        expect(commentsActions.fill({name: 'Comment'})).toMatchSnapshot();
-    });
-    test('Comment setFetchingError', () => {
-        expect(commentsActions.setFetchingError('We have a problem')).toMatchSnapshot();
-    });
+// comment actions
+describe('#startFetching', () => { 
+    it('should start fetching process', () => { 
+        const action = commentActions.startFetching(); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
+describe('#stopFetching', () => { 
+    it('should stop fetching process', () => { 
+        const action = commentActions.stopFetching(); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
+describe('#fetchAsync', () => { 
+    it('should fire async fetching process', () => { 
+        const action = commentActions.fetchAsync(); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
+describe('#fill', () => { 
+    it('should fill with fetched data', () => { 
+        const action = commentActions.fill({name: 'Payload'}); 
+        expect(action).toMatchSnapshot(); 
+    }); 
+});
+describe('#setFetchingError', () => { 
+    it('should throw an error', () => { 
+        const action = commentActions.setFetchingError('We have a problem'); 
+        expect(action).toMatchSnapshot(); 
+    }); 
 });
