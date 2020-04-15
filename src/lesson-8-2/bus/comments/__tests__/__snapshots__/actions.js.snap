@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comments Actions fetchAsync 1`] = `[Function]`;
+
+exports[`Comments Actions fetchAsync 2`] = `[Function]`;
+
+exports[`Comments Actions fill 1`] = `
+Object {
+  "payload": Object {
+    "name": "Comments",
+  },
+  "type": "COMMENTS_FILL",
+}
+`;
+
+exports[`Comments Actions fill 2`] = `
+Object {
+  "payload": Object {
+    "name": "Comment",
+  },
+  "type": "COMMENTS_FILL",
+}
+`;
+
+exports[`Comments Actions setFetchingError 1`] = `
+Object {
+  "error": true,
+  "payload": "We have a problem",
+  "type": "COMMENTS_SET_FETCHING_ERROR",
+}
+`;
+
+exports[`Comments Actions setFetchingError 2`] = `
+Object {
+  "error": true,
+  "payload": "We have a problem",
+  "type": "COMMENTS_SET_FETCHING_ERROR",
+}
+`;
+
+exports[`Comments Actions startFetching 1`] = `
+Object {
+  "type": "COMMENTS_START_FETCHING",
+}
+`;
+
+exports[`Comments Actions startFetching 2`] = `
+Object {
+  "type": "COMMENT_START_FETCHING",
+}
+`;
+
+exports[`Comments Actions stopFetching 1`] = `
+Object {
+  "type": "COMMENTS_STOP_FETCHING",
+}
+`;
+
+exports[`Comments Actions stopFetching 2`] = `
+Object {
+  "type": "COMMENTS_STOP_FETCHING",
+}
+`;
