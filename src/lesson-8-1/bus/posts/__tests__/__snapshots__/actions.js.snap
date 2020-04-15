@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`posts Actions fetchAsync 1`] = `[Function]`;
+
+exports[`posts Actions fetchAsync 2`] = `[Function]`;
+
+exports[`posts Actions fill 1`] = `
+Object {
+  "payload": Object {
+    "name": "posts",
+  },
+  "type": "POSTS_FILL",
+}
+`;
+
+exports[`posts Actions fill 2`] = `
+Object {
+  "payload": Object {
+    "name": "post",
+  },
+  "type": "POST_FILL",
+}
+`;
+
+exports[`posts Actions setFetchingError 1`] = `
+Object {
+  "error": true,
+  "payload": "We have a problem",
+  "type": "POSTS_SET_FETCHING_ERROR",
+}
+`;
+
+exports[`posts Actions setFetchingError 2`] = `
+Object {
+  "error": true,
+  "payload": "We have a problem",
+  "type": "POST_SET_FETCHING_ERROR",
+}
+`;
+
+exports[`posts Actions startFetching 1`] = `
+Object {
+  "type": "POSTS_START_FETCHING",
+}
+`;
+
+exports[`posts Actions startFetching 2`] = `
+Object {
+  "type": "POST_START_FETCHING",
+}
+`;
+
+exports[`posts Actions stopFetching 1`] = `
+Object {
+  "type": "POSTS_STOP_FETCHING",
+}
+`;
+
+exports[`posts Actions stopFetching 2`] = `
+Object {
+  "type": "POST_STOP_FETCHING",
+}
+`;
