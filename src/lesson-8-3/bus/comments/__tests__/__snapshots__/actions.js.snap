@@ -1,28 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Comments Actions fetchAsync 1`] = `[Function]`;
+exports[`#fetchAsync should fire async fetching process 1`] = `[Function]`;
 
-exports[`Comments Actions fetchAsync 2`] = `[Function]`;
+exports[`#fetchAsync should fire async fetching process 2`] = `[Function]`;
 
-exports[`Comments Actions fill 1`] = `
+exports[`#fill should fill with fetched data 1`] = `
 Object {
   "payload": Object {
-    "name": "Comments",
+    "name": "Payload",
   },
   "type": "COMMENTS_FILL",
 }
 `;
 
-exports[`Comments Actions fill 2`] = `
+exports[`#fill should fill with fetched data 2`] = `
 Object {
   "payload": Object {
-    "name": "Comment",
+    "name": "Payload",
   },
-  "type": "COMMENTS_FILL",
+  "type": "COMMENT_FILL",
 }
 `;
 
-exports[`Comments Actions setFetchingError 1`] = `
+exports[`#setFetchingError should throw an error 1`] = `
 Object {
   "error": true,
   "payload": "We have a problem",
@@ -30,34 +30,34 @@ Object {
 }
 `;
 
-exports[`Comments Actions setFetchingError 2`] = `
+exports[`#setFetchingError should throw an error 2`] = `
 Object {
   "error": true,
   "payload": "We have a problem",
-  "type": "COMMENTS_SET_FETCHING_ERROR",
+  "type": "COMMENT_SET_FETCHING_ERROR",
 }
 `;
 
-exports[`Comments Actions startFetching 1`] = `
+exports[`#startFetching should start fetching process 1`] = `
 Object {
   "type": "COMMENTS_START_FETCHING",
 }
 `;
 
-exports[`Comments Actions startFetching 2`] = `
+exports[`#startFetching should start fetching process 2`] = `
 Object {
   "type": "COMMENT_START_FETCHING",
 }
 `;
 
-exports[`Comments Actions stopFetching 1`] = `
+exports[`#stopFetching should stop fetching process 1`] = `
 Object {
   "type": "COMMENTS_STOP_FETCHING",
 }
 `;
 
-exports[`Comments Actions stopFetching 2`] = `
+exports[`#stopFetching should stop fetching process 2`] = `
 Object {
-  "type": "COMMENTS_STOP_FETCHING",
+  "type": "COMMENT_STOP_FETCHING",
 }
 `;
