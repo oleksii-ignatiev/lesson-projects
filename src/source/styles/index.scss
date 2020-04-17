@@ -413,12 +413,22 @@ main {
       margin-bottom: 34px;
 
       .tag {
+        opacity: .4;
         margin-right: 9px;
         transition: all 200ms;
 
         &:hover {
+          opacity: 1;
           cursor: pointer;
           transform: scale(1.1);
+        }
+        &.selected {
+          opacity: 1;
+        
+          &:hover {
+            cursor: auto;
+            transform: none;
+          }
         }
 
         &:last-child {
@@ -464,7 +474,7 @@ main {
 
 footer {
   position: absolute;
-  bottom: 0;
+//   bottom: 0;
   padding: 20px 0 23px 38px;
 
   span {

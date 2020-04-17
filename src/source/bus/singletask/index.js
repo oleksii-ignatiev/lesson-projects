@@ -1,52 +1,65 @@
 
 import React from 'react';
+import { Formik, Form, Field } from 'formik';
+import { api } from '../../api';
 
-import  { TaskHead } from './components/taskhead';
+import  { initialValues } from './initialValues';
+import  { TaskHead } from './taskHead';
+import  { TextInput } from './formFields/textInput';
+import  { DeadLine } from './formFields/deadLine';
+import  { TextArea } from './formFields/textArea';
+import  { CheckList } from './formFields/checkList';
+import  { Tag } from './formFields/tag';
+
+import tags from './tags.json';
+
 
 export const SingleTask = () => {
+    const print = (data) =>  { 
+        api.post.create()
+            .then( (response) => {
+                return response.json();
+            })
+            .then( (data) => { 
+                console.log(data); 
+            }); 
+         };
+
     return (
         <>
             <div className="task-card">
                 <TaskHead />
                 
                 <div className="content">
-                    <input type="text" placeholder="Task title" className="title"/>
-                    <div className="deadline">
-                        <span className="label">Due to</span>
-                        <span className="date">14 AUG 2020</span>
-                    </div>
-                    <div className="description">
-                        <span className="label">Description</span>
-                        <textarea className="text" placeholder="Describe your event">
-                            There is no denying the fact that the success of an advertisement
-                            lies mostly in the headline. The headline should attract the reader.
-                        </textarea>
-                    </div>
-                    <div className="checklist">
-                        <span className="label">Checklist</span>
-                        <div className="sub-tasks">
-                            <div className="sub-task completed">
-                                <input type="text" value="Design new home page"/>
+                    <Formik
+                        initialValues={initialValues}
+                        // validationSchema={validationSchema}
+                        onSubmit={ print }
+                    >
+                        <Form>
+                            <TextInput className="title" type="text" placeholder="Task title" name="title" />
+                            
+                            <DeadLine name ="deadline" label = "Due to" />
+                                
+                            <TextArea placeholder="Describe your event" name="description"/>
+                            
+                            <div className="checklist">
+                                <span className="label">Checklist</span>
+                                <div className="sub-tasks">
+                                    <CheckList placeholder="Add more" name="subtask"/>
+                                </div>
                             </div>
-                            <div className="sub-task incompleted">
-                                <input type="text" value="Send design samples to the customer"/>
+
+                            <Tag tags = { tags }/>
+                           
+                            <div className="form-controls">
+                                <button className="button-reset-task">Reset</button>
+                                <button className="button-save-task" type="submit">Save</button>
                             </div>
-                            <div className="sub-task">
-                                <input type="text" placeholder="Add more"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="tags">
-                        <span className="tag first">Sketch</span>
-                        <span className="tag second">Spotify</span>
-                        <span className="tag third">Dribble</span>
-                        <span className="tag fourth">Behance</span>
-                        <span className="tag fifth">UX</span>
-                    </div>
-                    <div className="form-controls">
-                        <button className="button-reset-task">Reset</button>
-                        <button className="button-save-task">Save</button>
-                    </div>
+                            <div className="errors"></div>
+                        </Form>
+                    </Formik>
+
                 </div>
             </div>
         </>
