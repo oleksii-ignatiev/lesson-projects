@@ -1,1 +1,1 @@
-export const root = 'https://lab.lectrum.io/rtx';
+export const root = 'https://lab.lectrum.io/rtx/api';

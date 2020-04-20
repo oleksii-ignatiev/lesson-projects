@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { useField, useFormikContext } from "formik";
+
 import cx from "classnames";
 
 export const Tag = (props) => {
     const tags = props.tags || [];
     const [active, setActive] = useState(0);
+    const { setFieldValue } = useFormikContext();
+    const [field] = useField( props ); 
     const toggle = (index) => setActive(index);
-    
+        
     return (
         <div className="tags">
             {tags.map( (item, index) => {
@@ -17,7 +21,7 @@ export const Tag = (props) => {
                 })
                    
                 return (
-                    <span key = { index } className={ tagCX } onClick = { () => toggle(index) }>{ item.body }</span>
+                    <span key = { index } className={ tagCX } onClick = { () => { toggle(index); setFieldValue(field.name, item.body) } }>{ item.body }</span>
                 )
             })}
 		</div>

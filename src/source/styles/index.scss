@@ -232,6 +232,7 @@ main {
       background: none;
       border: none;
       margin-left: 26px;
+      outline: none;
 
       &::before {
         content: '\f14a';
@@ -249,6 +250,10 @@ main {
 
       &.completed {
         color: $color3;
+
+        &::before {
+            content: '\f560';
+        }
       }
     }
 
@@ -437,6 +442,15 @@ main {
       }
     }
 
+    .errors {
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        .errorMessage {
+            color: $color20;
+            margin-bottom: 5px;
+        }
+    }
     .form-controls {
       display: flex;
 

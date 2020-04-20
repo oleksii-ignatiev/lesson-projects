@@ -1,6 +1,13 @@
 export const initialValues = {
+    completed: false,
     title: '',
     deadline: '',
     description: '',
-    subtask: '',
+    tag: '',
+    checklist: [
+        // {
+        //     title: '111',
+        //     completed: false
+        // }
+    ]
 };
