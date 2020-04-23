@@ -5,9 +5,9 @@ export const initialValues = {
     description: '',
     tag: '',
     checklist: [
-        // {
-        //     title: '111',
-        //     completed: false
-        // }
-    ]
+        {
+        title: '111',
+        completed: false
+    }
+]
 };

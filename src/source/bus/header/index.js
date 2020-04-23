@@ -1,10 +1,10 @@
 import React from 'react';
 
-
-export const Header = () => {
+export const Header = (props) => {
+    
     return (
         <div className="controls">
-            <button className="button-create-task">New Task</button>
+            <button className="button-create-task" onClick = { props.openCard } >New Task</button>
         </div>
     )
 }

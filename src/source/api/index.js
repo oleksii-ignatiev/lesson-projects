@@ -2,7 +2,7 @@ import { root } from './config';
 
 export const api = Object.freeze({
     
-    post: {
+    task: {
         create: ( data ) => {
             return fetch( `${root}/todos`, { 
                 method: 'POST',
@@ -10,22 +10,7 @@ export const api = Object.freeze({
                     'Content-Type':'application/json',
                     'x-user': 'oleksii',
                 },
-                body: JSON.stringify(data
-                //     {
-                //     "completed": false,
-                //     "title": "Test title",
-                //     "description": "description",
-                //     "deadline": "21 Apr 2020",
-                //     "tag": "Sketch",
-                //     "checklist": [
-                //         {
-                //             "title": "learn ui",
-                //             "completed": false
-                //         }
-                //     ]
-                // }
-                )
-                
+                body: JSON.stringify(data)
             })   
         },
         get: () => {
@@ -36,6 +21,24 @@ export const api = Object.freeze({
                     'x-user': 'oleksii',
                 },
             })
-        }
+        },
+        getTask: (hash) => {
+            return fetch( `${root}/todos/${hash}`, { 
+                method: 'GET',
+                headers: {
+                    'Content-Type':'application/json',
+                    'x-user': 'oleksii',
+                },
+            })
+        },
+        delete: (hash) => {
+            return fetch( `${root}/todos/${hash}`, { 
+                method: 'DELETE',
+                headers: {
+                    'Content-Type':'application/json',
+                    'x-user': 'oleksii',
+                },
+            })
+        },
     },
 })

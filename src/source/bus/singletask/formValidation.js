@@ -20,5 +20,5 @@ export const validationSchema = Yup.object().shape({
             .required('Sub-task title is required')
             .min(3, 'Sub-task title is too short'),
         completed: Yup.bool(),
-    }))
+    }))//.required()
 });

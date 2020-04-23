@@ -477,10 +477,22 @@ main {
 
       .button-save-task {
         background-color: $color13;
+        &:disabled {
+            transform: scale(1);
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            opacity: .3;
+        }
       }
 
       .button-reset-task {
         background-color: $color11;
+        &:disabled {
+            transform: scale(1);
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            opacity: .3;
+        }
       }
     }
   }
