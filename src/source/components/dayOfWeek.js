@@ -1,8 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import 'moment/locale/ru';
 import cx from "classnames";
-
 
 export const Day = (props) => {
     const currentDay = props.day;
@@ -14,8 +12,6 @@ export const Day = (props) => {
     });
     
     const toggle = (index) => props.setIsShowing(index);
-
-    moment.locale('ru');
 
     return (
         <div className={ dayCX } onClick = { () => toggle(props.index) } >

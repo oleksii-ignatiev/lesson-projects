@@ -3,7 +3,8 @@ import moment from 'moment';
 
 export const Day = (props) => {
     const theDay = Object(props.currentDay[props.isShowing]);
-    return (
+    
+    return ( theDay.day ) ? (
         <>
             <div className="head">
                 <div className="icon cloudy"></div>
@@ -20,5 +21,5 @@ export const Day = (props) => {
                 </p>
             </div>
         </>
-    );
+    ) : (<></>)
 };
